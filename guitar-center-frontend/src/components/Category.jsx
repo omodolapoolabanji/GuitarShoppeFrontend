@@ -12,8 +12,8 @@ export default function Category(){
         <div className='my-5 ms-3' >
         <h3 className='mb-5'>Shop by Category</h3>
         <div className='d-flex mb-2 justify-content-evenly '  >
-            {categories.map((category) => (
-                <Card  type={category} />
+            {categories.map((category, index) => (
+                <Card key={index} type={category} />
             ))}
         </div>
         </div>

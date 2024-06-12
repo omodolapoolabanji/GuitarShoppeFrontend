@@ -1,0 +1,8 @@
+.card-custom-guitar{
+    transition:transform 0.25s
+}
+.card-custom-guitar:hover{
+        transform: translate(0,-10px);
+        cursor: pointer; 
+}
+

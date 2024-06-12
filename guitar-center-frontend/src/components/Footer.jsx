@@ -4,7 +4,7 @@ export default function Footer(){
 
 
     return(
-        <footer className='bg-dark ps-3 align-items-center d-flex  justify-content-between text-light'>
+        <footer className='bg-dark ps-3 align-items-center d-flex  justify-content-between text-light mt-3' style={{bottom: 0, position: 'relative' }}>
             <a href="" style={{textDecoration:'none', display: 'flex'}} className='w-auto align-items-center'>
                 <MusicalNoteIcon style={{color:'white', width:'30px', height:'30px'}} className='me-2   '></MusicalNoteIcon>
                 <p className='me-3 pt-3' style={{whiteSpace:'pre-line', color:'white', fontWeight: '400px'}} > Guitar Shoppe</p>
