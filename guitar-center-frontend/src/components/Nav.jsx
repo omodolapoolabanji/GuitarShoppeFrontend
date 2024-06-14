@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {MusicalNoteIcon, UserCircleIcon, ShoppingCartIcon, MagnifyingGlassIcon} from  '@heroicons/react/24/solid'
 import Cart from './Cart'
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import 'bootstrap/dist/css/bootstrap.min.css'
+import { Login } from './login' 
+
 
 
 
@@ -13,8 +13,8 @@ export default function Header(){
     }
 
     const headStyle ={
-        position: 'sticky', 
-        top: 0, boxShadow : '0px 0px 5px 0px  rgba(0, 0, 0, 0.1)', backgroundColor: 'white', zIndex:5 
+        position: '', 
+        top: 0, boxShadow : '0px 0px 5px 0px  rgba(0, 0, 0, 0.1)', backgroundColor: 'white', zIndex: 1
     }
 
     return(
@@ -32,7 +32,7 @@ export default function Header(){
               
             </div>
 
-            <UserCircleIcon style={style} className='me-3' ></UserCircleIcon>
+            <Login/>
             <Cart />
             </div>
         </ header>

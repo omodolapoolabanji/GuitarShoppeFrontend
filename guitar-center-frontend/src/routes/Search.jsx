@@ -4,6 +4,7 @@ import {useEffect, useState} from 'react'
 import {useLoaderData} from 'react-router-dom'
 import Footer from '../components/Footer'
 import SearchBar from '../components/SearchBar'
+import  Cart  from '../components/Cart'
 
 export default function Search(){
 
@@ -47,8 +48,10 @@ export default function Search(){
     return (
         
         <>{/* search header */}
-        <div className='mx-3 mt-2'>
-        <SearchBar /></div>
+        <div className='mx-3 mt-2 d-flex '>
+        <SearchBar />
+        <Cart/>
+        </div>
         
             <div className='ms-3 md-3'>
                 <h2>

@@ -2,7 +2,7 @@
 import './App.css'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 import Category from './components/Category'
 import Popular from './components/Popular'
 import Top from './components/Top'

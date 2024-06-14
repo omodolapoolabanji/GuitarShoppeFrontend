@@ -1,8 +1,7 @@
 import {ShoppingCartIcon} from '@heroicons/react/24/solid'
 import { useSelector, useDispatch } from 'react-redux'
 import { removeFromcart } from '../services/cartSlice'
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 export default function Cart(){
     
@@ -28,7 +27,7 @@ export default function Cart(){
                 <ShoppingCartIcon style={style} />   
             </div>
 
-            <div className='modal fade' id='shopping-cart'  tabIndex="-1" aria-labelledby="CartModalLabel" aria-hidden="true">
+            <div className='modal fade' id='shopping-cart' tabIndex="-1" aria-labelledby="CartModalLabel" aria-hidden="true">
                 <div className='modal-dialog'>
                     <div className='modal-content'>
                         <div className='modal-header'>
