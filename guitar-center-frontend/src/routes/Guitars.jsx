@@ -5,8 +5,11 @@ import {useState, useEffect, useRef} from 'react'
 import { getHost } from "../services/service"
 import SearchBar from "../components/SearchBar"
 import Footer from '../components/Footer'
+import Cart from "../components/Cart"
 
 export  default function Guitars(){
+
+    
 
     // const {type} = useParams()
     const data = useLoaderData(); 
@@ -15,6 +18,7 @@ export  default function Guitars(){
     const [filter, setFilter] = useState('') 
     const [visible, setVisible] = useState('')
     const [query, setQuery] = useState('')
+    const displayImage = data.type == 'guitars'? 'https://media.guitarcenter.com/is/image/MMGS7/583500000003000-00-600x600.jpg':'https://media.guitarcenter.com/is/image/MMGS7/333170000000084-00-600x600.jpg'
 
 
     
@@ -97,7 +101,7 @@ function movePage(pointer) {
             return answer
             }
         
-        let extension = type === 'guitars'? `items/guitars${filter}?page=${page}`:'items/accessories'
+        let extension = type === 'guitars'? `items/guitars${filter}?page=${page}`:`items/accessories${filter}?page=${page}`
         let result = null
         try{
             console.log(page)
@@ -114,13 +118,6 @@ function movePage(pointer) {
         return result
     }
 
-    // function searchGuitars(query){
-
-
-    // }
-
-    
-    
     let buttonsGroup = []
     for(let i=0; i < 3; i++ ){
         buttonsGroup.push(
@@ -146,16 +143,16 @@ function movePage(pointer) {
         <div className="ms-2"> 
         
         <div className=" bg-light-subtle pb-3 ">
-        <div className="mt-2 mx-2">< SearchBar/></div>
+        <div className="mt-2 mx-2 d-flex">< SearchBar/> <Cart /></div>
             <section className = 'd-flex justify-content-between mx-3'>
                 <div className="my-auto py-auto ">
                 <h1 className="header-title mt-2" style={{fontWeight: '700', fontSize: '60px'}}>{data.title}</h1>
                 <p style={{fontWeight: '300', color: 'grey', lineHeight: ''}} className="">{data.paragraph}</p>
                 </div>
                 
-               
+                    
                     <div className="bg-dark-subtle rounded-4 ms-2">
-                    <img className="image-fluid rounded float-end " style={{width: '500px', height: '500px', objectFit: '',mixBlendMode: 'multiply'}} src="https://media.guitarcenter.com/is/image/MMGS7/583500000003000-00-600x600.jpg"  alt="Yamaha guitar as the display for the guitars page"  />
+                    <img className="image-fluid rounded float-end " style={{width: '500px', height: '500px', objectFit: '',mixBlendMode: 'multiply'}} src={displayImage}  alt="Yamaha guitar as the display for the guitars page"  />
                     </div>
 
 
@@ -248,7 +245,7 @@ export async function getGuitars(){
 export async function getAccessories(){
 
     const data = {title: 'Find The Perfect Accessory curated for you', 
-    paragraph : 'Browse our extensive collection of guitars and find the one that speaks to your musical soul', 
+    paragraph : 'Browse our extensive collection of guitar accessories and find the one that speaks to your musical soul', 
     visibility: 'invisible', 
     type: 'accessories', 
     guitars: []

@@ -56,7 +56,7 @@ export default function Search(){
                 </h2>
             </div>
 
-            <div className='mx-3 ' >
+            <div className='mx-3' >
                 { guitars ? guitars.map(
                     
                     (items, index)=>(
@@ -66,7 +66,7 @@ export default function Search(){
                 ) : <p> No search results for your query!</p>}</div>
                   
 
-                <div className='' style={{position: 'relative', bottom: 0 , width: '100%'}}>
+                <div className='' style={{position: 'absolute', bottom: 0 , width: '100%'}}>
                 <Footer  />
                 </div>
         </>

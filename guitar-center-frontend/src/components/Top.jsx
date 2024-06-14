@@ -4,10 +4,32 @@ export default function Top(){
     // need to revisit this, needs to be dynamically filled by the popular items in the backend    
     const cards = [
 
-        {name: 'Fender American Professional II Stratocaster', id: '' , price: '$1499.99', img: 'https://media.guitarcenter.com/is/image/MMGS7/L46829000001000-00-600x600.jpg'    }, {
-            name: 'Martin D-28 Acoustic Guitar', id: '', img: 'https://media.guitarcenter.com/is/image/MMGS7/L59796000001000-00-600x600.jpg', price: '$2,199.99'   
-        }, {
-            name: 'Ibanez RG550 Genesis Electric Guitar', id: '', price: '$999.99', img: 'https://media.guitarcenter.com/is/image/MMGS7/L46834000001000-00-600x600.jpg'  
+        {
+            "name": "Gator Transit Series Gig Bag",
+            "description": "Durable and protective gig bag with plush interior and water-resistant exterior.",
+            "imageUrl": "https://media.guitarcenter.com/is/image/MMGS7/L96281000001000-00-600x600.jpg",
+            "id": 212,
+            "price": 50,
+            "category": "Cases",
+            "type": null
+        },
+        {
+            "name": "Mogami Gold Instrument Cable",
+            "description": "Premium instrument cable with superior signal clarity and durability.",
+            "imageUrl": "https://media.guitarcenter.com/is/image/MMGS7/333170000000084-00-600x600.jpg",
+            "id": 213,
+            "price": 40,
+            "category": "Cables",
+            "type": null
+        },
+        {
+            "name": "D'Addario EXL110 Strings",
+            "description": "High-quality electric guitar strings with a balanced tone and long-lasting durability.",
+            "imageUrl": "https://media.guitarcenter.com/is/image/MMGS7/H71088000000000-00-600x600.jpg",
+            "id": 214,
+            "price": 10,
+            "category": "Strings",
+            "type": null
         }
     ]
     var key = 0 

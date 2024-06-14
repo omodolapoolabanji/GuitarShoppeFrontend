@@ -1,5 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {MusicalNoteIcon, UserCircleIcon, ShoppingCartIcon, MagnifyingGlassIcon} from  '@heroicons/react/24/solid'
+import Cart from './Cart'
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 
 export default function Header(){
@@ -29,7 +33,7 @@ export default function Header(){
             </div>
 
             <UserCircleIcon style={style} className='me-3' ></UserCircleIcon>
-            <ShoppingCartIcon style={style}></ShoppingCartIcon>
+            <Cart />
             </div>
         </ header>
     )
