@@ -2,12 +2,16 @@ import {ShoppingCartIcon} from '@heroicons/react/24/solid'
 import { useSelector, useDispatch } from 'react-redux'
 import { removeFromcart } from '../services/cartSlice'
 import { getHost } from '../services/service'
+import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 
 export default function Cart(){
     
     const count = useSelector((state)=>state.cart.items)
     const items = useSelector((state)=> state.cart.values)
     const total =  Intl.NumberFormat('en-US', { style: 'decimal' }).format(useSelector((state)=> state.cart.total) )
+    const navigateCheckout = useNavigate()
+    
 
     const style = {
         color :'grey',  
@@ -17,11 +21,24 @@ export default function Cart(){
     const remove = (item)=> dispatch(removeFromcart(item))
 
     
-
+    useEffect(() => {
+        
+        const modalBackdrop = document.querySelector('.modal-backdrop');
+        if (modalBackdrop) {
+          modalBackdrop.remove();
+        }
+    
+        document.body.classList.remove('modal-open');
+        document.body.style.overflow = 'auto';
+      }, []);
 
 
    async function checkout(){
-    
+    if(!localStorage.getItem('token')){
+        alert('You need to be signed in to checkout any orders!')
+        navigateCheckout('/')
+        return
+    }
     if (count < 1){
         alert('Cannot checkout an empty cart!')
         return 
@@ -64,7 +81,8 @@ export default function Cart(){
         console.error(err)
         alert('Problem checking out items!')
     }
-
+    alert('You can view your orders by navigating to your profile and clicking on "Orders".')
+    navigateCheckout('/')
 
    }
    

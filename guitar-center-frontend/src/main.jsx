@@ -12,6 +12,8 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
+
+
 const contextLoader = async ({params})=>{
   console.log(params.type)
   if (params.type === 'accessories'){

@@ -2,9 +2,15 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Link } from 'react-router-dom'
 
 export default function Hero(){
+
     return (
         
-
+        
+<>
+<div className="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Heads Up!</strong>This web application is hosted on a free tier instance of <strong>Render.com</strong>. Please note that the server may spin down after 15 minutes of inactivity, so we recommend logging in or creating a user profile before proceeding.
+  <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
         <div className="d-flex pw-2 justify-content-between bg-light-subtle " style={{paddingTop: "50px", paddingBottom: '50px' }}>
             <div className='me-3 ms-3 align-content-center '>
                 <h1 style={{fontWeight: 600, color: 'black' }}> Discover the Best Guitars</h1>
@@ -24,7 +30,7 @@ export default function Hero(){
             }}/>
             </div>   
 
-        </div>
+        </div></>
         
     )
 
