@@ -72,7 +72,7 @@ export default function Card({check, type}){
 
                     <div className='d-flex justify-content-between'>
                     <h5 className="card-text" style={{fontWeight: '600'}}>${cleanPrice}.00</h5>
-                    <a href="" className="btn btn-secondary me-3 bg-dark" style={{ fontWeight: '100px' }} onClick={(e) => { e.preventDefault(); add(payload); }}> Add to Cart</a></div>
+                    <a href="" className="btn btn-dark me-3 " style={{ fontWeight: '100px' }} onClick={(e) => { e.preventDefault(); add(payload); }}> Add to Cart</a></div>
                 </div>
             </div>
         );
@@ -88,7 +88,7 @@ export default function Card({check, type}){
             <div className="card-body" style={{backgroundColor: 'white', overflow: 'hidden' }}>
                 <h5 className="card-title">{type.name}</h5>
                 <p className="card-text">${type.price}</p>
-                <a href="" className="btn btn-secondary me-3 bg-dark
+                <a href="" className="btn btn-dark me-3
                 " style={{fontWeight: '100px' }} onClick={(e) => { e.preventDefault(); add(payload); }}>Add to Cart</a>
 
                 {/* <a href="" ><HeartIcon className='text-secondary rounded ' style={{width: '38px', height: '38px', border: 'solid '}}></HeartIcon></a> */}
