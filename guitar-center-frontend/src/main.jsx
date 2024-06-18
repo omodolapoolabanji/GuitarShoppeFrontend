@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import {createBrowserRouter, RouterProvider, useParams} from 'react-router-dom'
+import {createBrowserRouter, RouterProvider, useParams, BrowserRouter} from 'react-router-dom'
 import ErrorPage from './error-page.jsx'
 import Guitars, {getGuitars, getAccessories} from './routes/Guitars.jsx'
 import Search from './routes/Search.jsx'
@@ -52,6 +52,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Provider store={store}><RouterProvider router= {router} /></Provider>
+    <Provider store={store}>
+    <RouterProvider router= {router} />
+      
+      </Provider>
   </React.StrictMode>,
 )
